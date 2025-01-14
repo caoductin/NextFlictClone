@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import UIKit
+
+class ForgotPasswordScreenController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
