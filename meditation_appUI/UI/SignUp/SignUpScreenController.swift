@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import UIKit
+
+class SignUpScreenController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}

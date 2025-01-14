@@ -1,25 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z3F-DG-VC1">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="qRS-d7-RqR">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="meditation_appUI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAa-xd-4z5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="Z3F-DG-VC1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yhv-aI-KB1">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="53q-0U-HZd" kind="relationship" relationship="rootViewController" id="GtZ-ku-jY9"/>
+                    </connections>
+                </navigationController>
             </objects>
-            <point key="canvasLocation" x="88" y="-28"/>
+            <point key="canvasLocation" x="294" y="-334"/>
+        </scene>
+        <!--WelcomeScreenController-->
+        <scene sceneID="Usr-G3-xOW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Welcome" referencedIdentifier="WelcomeScreenController" id="53q-0U-HZd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dOL-6y-ZvT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="490-Er-p3o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="-561"/>
+        </scene>
+        <!--ForgotPasswordScreenController-->
+        <scene sceneID="ENy-g0-4L9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ForgotPassword" referencedIdentifier="ForgotPasswordScreenController" id="cJ1-IV-l3B" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMp-XO-SMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="-239"/>
+        </scene>
+        <!--SignInScreenController-->
+        <scene sceneID="fpO-lr-YNN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignIn" referencedIdentifier="SignInScreenController" id="YO7-cg-2xb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epT-eK-qa7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297" y="-67"/>
+        </scene>
+        <!--SignUpScreenController-->
+        <scene sceneID="H3k-X6-6n8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" referencedIdentifier="SignUpScreenController" id="YWE-9v-ofx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mds-mz-mm8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276" y="70"/>
         </scene>
     </scenes>
 </document>
