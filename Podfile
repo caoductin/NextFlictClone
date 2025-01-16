@@ -5,4 +5,5 @@ use_modular_headers!
 target 'meditation_appUI' do
   pod 'FirebaseAuth'
   pod 'GoogleSignIn'
+  pod 'IQKeyboardManagerSwift'
 end
