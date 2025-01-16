@@ -79,6 +79,9 @@
                                                 <rect key="frame" x="0.0" y="139.5" width="296" height="32"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot password?" buttonSize="small"/>
+                                                <connections>
+                                                    <action selector="forgotPassworDidtapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0FP-4Q-Kir"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -102,6 +105,9 @@
                                                         <rect key="frame" x="222.5" y="0.0" width="73.5" height="62.5"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="SIGN UP"/>
+                                                        <connections>
+                                                            <action selector="signUpDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YMe-mD-FF8"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

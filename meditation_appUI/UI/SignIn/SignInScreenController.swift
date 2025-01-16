@@ -22,6 +22,28 @@ class SignInScreenController: UIViewController {
     private lazy var emailFieldDelegate = EmailFieldDelegate()
     private lazy var passwordFieldDelegate = EmailFieldDelegate()
 
+    @IBAction func signUpDidTapped(_ sender: UIButton) {
+        if let viewControllers = navigationController?.viewControllers {
+            for vc in viewControllers {
+                if vc is SignUpScreenController {
+                    navigationController?.popToViewController(vc, animated: true)
+                    return
+                }
+            }
+        }
+        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "SignUpScreenController") as? SignUpScreenController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
+    @IBAction func forgotPassworDidtapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "ForgotPassword", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordScreenController") as? ForgotPasswordScreenController {
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         settupView()
