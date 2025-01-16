@@ -68,10 +68,13 @@ for smalls meditation </string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-Pv-2QH">
-                                                                <rect key="frame" x="309" y="74.666666666666629" width="84" height="34.333333333333343"/>
+                                                                <rect key="frame" x="309" y="72.666666666666629" width="84" height="38.333333333333343"/>
                                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="40"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Login" buttonSize="medium"/>
+                                                                <connections>
+                                                                    <action selector="loginDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lQA-e6-is7"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
