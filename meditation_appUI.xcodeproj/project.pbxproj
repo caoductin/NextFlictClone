@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D046A8710D7B96977ADC694 /* libPods-meditation_appUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C50B653F6EB001CF56E387 /* libPods-meditation_appUI.a */; };
+		B4AF389C14DC65D41D2D5B30 /* Pods_meditation_appUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92406CAE0FC1B2E2976D8E6 /* Pods_meditation_appUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		474A1E58C85D5A7342753312 /* Pods-meditation_appUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meditation_appUI.release.xcconfig"; path = "Target Support Files/Pods-meditation_appUI/Pods-meditation_appUI.release.xcconfig"; sourceTree = "<group>"; };
 		4FF2E86F2D35553E00A10E3D /* meditation_appUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meditation_appUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92406CAE0FC1B2E2976D8E6 /* Pods_meditation_appUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meditation_appUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E601777C5986F93499A68B04 /* Pods-meditation_appUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meditation_appUI.debug.xcconfig"; path = "Target Support Files/Pods-meditation_appUI/Pods-meditation_appUI.debug.xcconfig"; sourceTree = "<group>"; };
-		F3C50B653F6EB001CF56E387 /* libPods-meditation_appUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-meditation_appUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D046A8710D7B96977ADC694 /* libPods-meditation_appUI.a in Frameworks */,
+				B4AF389C14DC65D41D2D5B30 /* Pods_meditation_appUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,7 @@
 		4FB65AD7BEDBAC01F1E9B46D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3C50B653F6EB001CF56E387 /* libPods-meditation_appUI.a */,
+				D92406CAE0FC1B2E2976D8E6 /* Pods_meditation_appUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,6 +96,7 @@
 				4FF2E86B2D35553E00A10E3D /* Sources */,
 				4FF2E86C2D35553E00A10E3D /* Frameworks */,
 				4FF2E86D2D35553E00A10E3D /* Resources */,
+				B30F9B52DBDE1388E7AB8745 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +155,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B30F9B52DBDE1388E7AB8745 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meditation_appUI/Pods-meditation_appUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meditation_appUI/Pods-meditation_appUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meditation_appUI/Pods-meditation_appUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BA0649729823746EC185446D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,7 +300,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -345,7 +363,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
