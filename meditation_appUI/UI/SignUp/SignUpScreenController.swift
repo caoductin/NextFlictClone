@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-class SignUpScreenController: UIViewController ,UITextFieldDelegate{
+class SignUpScreenController: UIViewController {
     
     
     @IBOutlet weak var userNameTextField: UITextField!
@@ -32,6 +32,10 @@ class SignUpScreenController: UIViewController ,UITextFieldDelegate{
         EmailTextField.delegate = self
         passWordTextField.delegate = self
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
    @IBAction func backDidTaped(_ sender: Any) {
         navigationController?.popViewController(animated: true)
         
@@ -44,7 +48,7 @@ class SignUpScreenController: UIViewController ,UITextFieldDelegate{
         passWordTextField.isSecureTextEntry.toggle()
         let imageName = passWordTextField.isSecureTextEntry ? "view" : "hide"
         
-        let rightView = createPaddingView( imageName: imageName, imageSize: CGSize(width: 24, height: 24), paddingSize: CGSize(width: 40, height: 40) )
+        let rightView = createPaddingView( imageName: imageName, imageSize: CGSize(width: 18, height: 18), paddingSize: CGSize(width: 40, height: 40) )
         
         passWordTextField.rightView = rightView
         passWordTextField.rightViewMode = .always
@@ -63,19 +67,6 @@ class SignUpScreenController: UIViewController ,UITextFieldDelegate{
         isChecked.toggle()
     }
     
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == userNameTextField{
-            EmailTextField.becomeFirstResponder()
-        }
-        else if textField == EmailTextField{
-            passWordTextField.becomeFirstResponder()
-        }
-        else if textField == passWordTextField{
-            passWordTextField.resignFirstResponder()
-        }
-        return true
-    }
-    
+
 }
 
