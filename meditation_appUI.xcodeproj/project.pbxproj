@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B2FD71DC900A2DB7C0882B6 /* Pods_meditation_appUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC58716F1834BFE2DC361647 /* Pods_meditation_appUI.framework */; };
+		B4AF389C14DC65D41D2D5B30 /* Pods_meditation_appUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92406CAE0FC1B2E2976D8E6 /* Pods_meditation_appUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		474A1E58C85D5A7342753312 /* Pods-meditation_appUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meditation_appUI.release.xcconfig"; path = "Target Support Files/Pods-meditation_appUI/Pods-meditation_appUI.release.xcconfig"; sourceTree = "<group>"; };
 		4FF2E86F2D35553E00A10E3D /* meditation_appUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meditation_appUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92406CAE0FC1B2E2976D8E6 /* Pods_meditation_appUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meditation_appUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E601777C5986F93499A68B04 /* Pods-meditation_appUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meditation_appUI.debug.xcconfig"; path = "Target Support Files/Pods-meditation_appUI/Pods-meditation_appUI.debug.xcconfig"; sourceTree = "<group>"; };
-		EC58716F1834BFE2DC361647 /* Pods_meditation_appUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meditation_appUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B2FD71DC900A2DB7C0882B6 /* Pods_meditation_appUI.framework in Frameworks */,
+				B4AF389C14DC65D41D2D5B30 /* Pods_meditation_appUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,7 @@
 		4FB65AD7BEDBAC01F1E9B46D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC58716F1834BFE2DC361647 /* Pods_meditation_appUI.framework */,
+				D92406CAE0FC1B2E2976D8E6 /* Pods_meditation_appUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,7 +96,7 @@
 				4FF2E86B2D35553E00A10E3D /* Sources */,
 				4FF2E86C2D35553E00A10E3D /* Frameworks */,
 				4FF2E86D2D35553E00A10E3D /* Resources */,
-				2801DEDA336E97559CD73CF8 /* [CP] Embed Pods Frameworks */,
+				B30F9B52DBDE1388E7AB8745 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,7 +155,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2801DEDA336E97559CD73CF8 /* [CP] Embed Pods Frameworks */ = {
+		B30F9B52DBDE1388E7AB8745 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
