@@ -7,26 +7,20 @@
 
 import Foundation
 import UIKit
-class SignUpScreenController: UIViewController {
-    
+class SignUpScreenController: BaseViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
-    
     @IBOutlet weak var EmailTextField: UITextField!
-    
     @IBOutlet weak var passWordTextField: UITextField!
-
     @IBOutlet weak var CreateLabel: UILabel!
     @IBOutlet weak var checkBoxImageView: UIImageView!
     var isChecked = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: false)
         checkBoxTaped()
         setupUI()
         togglePasswordTaped()
-        //  IQKeyboardManager.shared.isEnabled = true
         hideKeyboard()
         userNameTextField.delegate = self
         EmailTextField.delegate = self
@@ -37,7 +31,7 @@ class SignUpScreenController: UIViewController {
     }
     
    @IBAction func backDidTaped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+       navigationController?.popViewController(animated: true)
         
     }
     @objc  func dismissKeyboard() {
@@ -47,7 +41,6 @@ class SignUpScreenController: UIViewController {
     @objc func togglePasswordVisibility() {
         passWordTextField.isSecureTextEntry.toggle()
         let imageName = passWordTextField.isSecureTextEntry ? "view" : "hide"
-        
         let rightView = createPaddingView( imageName: imageName, imageSize: CGSize(width: 18, height: 18), paddingSize: CGSize(width: 40, height: 40) )
         
         passWordTextField.rightView = rightView
