@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import IQKeyboardManagerSwift
 
 extension SignUpScreenController {
     func setupUI() {
@@ -15,6 +16,7 @@ extension SignUpScreenController {
         configureTextField(EmailTextField, cornerRadius: 10, rightViewImage: "correctIcon",showRightImage: false)
         configureTextField(userNameTextField, cornerRadius: 10, rightViewImage: "correctIcon",showRightImage: false)
         configureTextField(passWordTextField, cornerRadius: 10, rightViewImage: "view",showRightImage: true)
+        IQKeyboardManager.shared.isEnabled = true
     }
     
     func hideKeyboard() {
@@ -60,10 +62,8 @@ extension SignUpScreenController {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
         imageView.image = UIImage(named: imageName)
         imageView.contentMode = .scaleAspectFit
-        
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: paddingSize.width, height: paddingSize.height))
         paddingView.addSubview(imageView)
-        
         imageView.center = CGPoint(x: paddingView.frame.size.width / 2, y: paddingView.frame.size.height / 2)
         return paddingView
     }

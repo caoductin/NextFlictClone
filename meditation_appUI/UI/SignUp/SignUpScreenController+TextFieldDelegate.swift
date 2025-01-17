@@ -26,20 +26,24 @@ extension SignUpScreenController: UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         if userNameTextField == userNameTextField{
             if let userName = userNameTextField.text, !userName.isEmpty{
-                
                 toogleImageRightView(userNameTextField,true, rightViewImage: "correctIcon")
             }
             else{
-                toogleImageRightView(userNameTextField,true, rightViewImage: "close")
+                toogleImageRightView(userNameTextField,false, rightViewImage: nil)
             }
         }
         
-        if EmailTextField == EmailTextField{
-            if let email = EmailTextField.text,isValidEmail(email){
-                toogleImageRightView(EmailTextField, true, rightViewImage: "correctIcon")
+        if EmailTextField == EmailTextField {
+            if let email = EmailTextField.text,!email.isEmpty{
+                if isValidEmail(email){
+                    toogleImageRightView(EmailTextField, true, rightViewImage: "correctIcon")
+                }
+                else{
+                    toogleImageRightView(EmailTextField, true, rightViewImage: "close")
+                }
             }
             else{
-                toogleImageRightView(EmailTextField, true, rightViewImage: "close")
+                toogleImageRightView(EmailTextField, false, rightViewImage: nil)
             }
         }
     }

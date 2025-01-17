@@ -24,6 +24,7 @@ class WelcomeScreenController: UIViewController {
         }
     }
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         WelcomeLabel.font = AppTheme.mainFont.withSize(24)

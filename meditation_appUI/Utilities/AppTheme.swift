@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-struct AppTheme {
+struct AppTheme{
     static let ButtonPrimaryColor = UIColor(named: "ButtonPrimaryColor")
     static let ButtonSecondaryColor = UIColor(named: "ButtonSecondaryColor")
     static let backgroundColor = UIColor(named: "backgroundColor")
@@ -25,5 +25,7 @@ struct AppTheme {
         UITextField.appearance().font = mainFont
         UITextField.appearance().textColor = textColor
         UITextField.appearance().backgroundColor = backgroudTextField
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for: .default)
     }
 }
+
