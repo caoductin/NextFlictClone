@@ -7,59 +7,76 @@
 
 import Foundation
 import UIKit
+import IQKeyboardManagerSwift
 class SignUpScreenController: BaseViewController {
     
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var EmailTextField: UITextField!
-    @IBOutlet weak var passWordTextField: UITextField!
+    @IBOutlet weak var userNameTextField: ValidationTextField!
+    @IBOutlet weak var emailTextField: ValidationTextField!
     @IBOutlet weak var CreateLabel: UILabel!
+    @IBOutlet weak var passWordTextField: UIFlatTextField!
     @IBOutlet weak var checkBoxImageView: UIImageView!
     var isChecked = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkBoxTaped()
-        setupUI()
-        togglePasswordTaped()
-        hideKeyboard()
-        userNameTextField.delegate = self
-        EmailTextField.delegate = self
-        passWordTextField.delegate = self
+        setUpView()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-   @IBAction func backDidTaped(_ sender: Any) {
-       navigationController?.popViewController(animated: true)
-        
+    @IBAction func backDidTaped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func facebookSignInButton(_ sender: Any) {
+        AuthService.shared.signUpWithGoogle(withPresenting: self) { authResults, error in
+            if let error = error{
+                print("Dang nhập không thành công với lỗi\(error)")
+                return
+            }
+            print("Đăng nhập thành công")
+        }
+    }
+    
+    @IBAction func googleSignInButtonTapped(_ sender: Any) {
+        AuthService.shared.signUpWithGoogle(withPresenting: self) { authResults, error in
+            if let error = error{
+                print("Dang nhap  khong thanh cong với\(error)")
+                return
+            }
+            print("Đăng nhập thành công")
+        }
+        print("hellp button is tapped")
+    }
+    private func setUpView(){
+        CreateLabel.font = CreateLabel.font.withSize(24)
+        userNameTextField.delegate = self
+        emailTextField.delegate = self
+        passWordTextField.delegate = self
+        hideKeyboard()
+        IQKeyboardManager.shared.isEnabled = true
+        checkBoxTap()
+    }
+    
     @objc  func dismissKeyboard() {
         view.endEditing(true)
     }
     
-    @objc func togglePasswordVisibility() {
-        passWordTextField.isSecureTextEntry.toggle()
-        let imageName = passWordTextField.isSecureTextEntry ? "view" : "hide"
-        let rightView = createPaddingView( imageName: imageName, imageSize: CGSize(width: 18, height: 18), paddingSize: CGSize(width: 40, height: 40) )
-        
-        passWordTextField.rightView = rightView
-        passWordTextField.rightViewMode = .always
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(togglePasswordVisibility))
-        rightView.isUserInteractionEnabled = true
-        rightView.addGestureRecognizer(tapGesture)
-
+    func hideKeyboard() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
     
-    @objc func toggleImage() {
-        if isChecked {
-            checkBoxImageView.image = UIImage(named: "checkbox")
-        } else {
-            checkBoxImageView.image = UIImage(named: "checkboxTick")
-        }
+    private func checkBoxTap(){
+        checkBoxImageView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(toggleImage))
+        checkBoxImageView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func toggleImage(){
+        checkBoxImageView.image = UIImage(systemName: isChecked ? "square" : "checkmark.square.fill")
         isChecked.toggle()
     }
-    
-
 }
 

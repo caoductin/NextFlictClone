@@ -25,7 +25,7 @@ struct AppTheme{
         UITextField.appearance().font = mainFont
         UITextField.appearance().textColor = textColor
         UITextField.appearance().backgroundColor = backgroudTextField
-        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000, vertical: 0), for: .default)
+
     }
 }
 
