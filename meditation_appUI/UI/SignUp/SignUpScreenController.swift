@@ -10,11 +10,15 @@ import UIKit
 import IQKeyboardManagerSwift
 class SignUpScreenController: BaseViewController {
     
+    
+    @IBOutlet weak var googleSignInButton: GoogleSignInButton!
+    @IBOutlet weak var facebookSignInButton: FacebookSignInButton!
+    @IBOutlet weak var SignUpButton: UIButton!
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var userNameTextField: ValidationTextField!
     @IBOutlet weak var emailTextField: ValidationTextField!
-    @IBOutlet weak var CreateLabel: UILabel!
     @IBOutlet weak var passWordTextField: UIFlatTextField!
-    @IBOutlet weak var checkBoxImageView: UIImageView!
+    @IBOutlet weak var checkBoxView: CheckBoxView!
     var isChecked = false
     
     override func viewDidLoad() {
@@ -25,12 +29,10 @@ class SignUpScreenController: BaseViewController {
         super.viewWillAppear(animated)
     }
     
-    @IBAction func backDidTaped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    
     @IBAction func facebookSignInButton(_ sender: Any) {
+        facebookSignInButton.configuration?.showsActivityIndicator = true
         AuthService.shared.signUpWithGoogle(withPresenting: self) { authResults, error in
+            self.facebookSignInButton.configuration?.showsActivityIndicator = false
             if let error = error{
                 print("Dang nhập không thành công với lỗi\(error)")
                 return
@@ -39,44 +41,51 @@ class SignUpScreenController: BaseViewController {
         }
     }
     
+    @IBAction func SignUpButtonTapped(_ sender: Any) {
+        guard let email = userNameTextField.text, !email.isEmpty,
+              let password = passWordTextField.text, !password.isEmpty else {
+            showAlert(title: "sign up", message: "khong để fill này rỗng đc")
+            return
+        }
+        SignUpButton.configuration?.showsActivityIndicator = true
+        AuthService.shared.signupWithEmail(email: email, password: password) { authResults, error in
+            if let error = error {
+                self.SignUpButton.configuration?.showsActivityIndicator = false
+                self.showAlert(title: "Error", message: error.localizedDescription)
+                return
+            }
+            print("dang nhpa thanh cong")
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
     @IBAction func googleSignInButtonTapped(_ sender: Any) {
+        googleSignInButton.configuration?.showsActivityIndicator = true
         AuthService.shared.signUpWithGoogle(withPresenting: self) { authResults, error in
+            self.googleSignInButton.configuration?.showsActivityIndicator = false
             if let error = error{
                 print("Dang nhap  khong thanh cong với\(error)")
                 return
             }
             print("Đăng nhập thành công")
         }
-        print("hellp button is tapped")
     }
+    
     private func setUpView(){
-        CreateLabel.font = CreateLabel.font.withSize(24)
+        headerLabel.font = headerLabel.font.withSize(24)
         userNameTextField.delegate = self
         emailTextField.delegate = self
         passWordTextField.delegate = self
-        hideKeyboard()
         IQKeyboardManager.shared.isEnabled = true
-        checkBoxTap()
     }
     
     @objc  func dismissKeyboard() {
         view.endEditing(true)
     }
     
-    func hideKeyboard() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-    }
-    
-    private func checkBoxTap(){
-        checkBoxImageView.isUserInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(toggleImage))
-        checkBoxImageView.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func toggleImage(){
-        checkBoxImageView.image = UIImage(systemName: isChecked ? "square" : "checkmark.square.fill")
-        isChecked.toggle()
-    }
 }
+
 

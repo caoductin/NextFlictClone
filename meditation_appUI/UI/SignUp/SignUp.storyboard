@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,44 +14,42 @@
             <objects>
                 <viewController storyboardIdentifier="SignUpScreenController" id="Y6W-OH-hqX" customClass="SignUpScreenController" customModule="meditation_appUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="signUpBG" translatesAutoresizingMaskIntoConstraints="NO" id="MI2-nZ-rqA">
-                                <rect key="frame" x="-50" y="-50" width="520" height="429"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signUpBG" translatesAutoresizingMaskIntoConstraints="NO" id="MI2-nZ-rqA">
+                                <rect key="frame" x="-30" y="-60" width="500" height="429"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q2u-YN-I7M">
-                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q2u-YN-I7M">
+                                <rect key="frame" x="0.0" y="62" width="440" height="860"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="fillEqually" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psx-5s-1Tm">
-                                        <rect key="frame" x="12" y="0.0" width="406" height="169.66666666666666"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Psx-5s-1Tm">
+                                        <rect key="frame" x="12" y="0.0" width="416" height="177"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" text="Create your account " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBq-AU-ma8">
-                                                <rect key="frame" x="8" y="8" width="390" height="46.333333333333336"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Z71-KB-uNd"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="fMu-nE-hGa"/>
-                                                </constraints>
+                                                <rect key="frame" x="8" y="8" width="400" height="47"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yjp-c0-KEG">
-                                                <rect key="frame" x="8" y="59" width="390" height="46.333333333333343"/>
+                                                <rect key="frame" x="8" y="65" width="400" height="47"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpC-Yn-FSJ" customClass="FacebookSignInButton" customModule="meditation_appUI" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="46.333333333333336"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="u8J-il-dlP"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="47"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule" buttonSize="large">
                                                             <attributedString key="attributedTitle">
-                                                                <fragment content="CONTINUE WITH GOOGLE">
+                                                                <fragment content="CONTINUE WITH">
                                                                     <attributes>
-                                                                        <font key="NSFont" size="14" name="Helvetica"/>
+                                                                        <font key="NSFont" metaFont="system" size="14"/>
                                                                         <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                                <fragment content=" FACEBOOK">
+                                                                    <attributes>
+                                                                        <font key="NSFont" metaFont="menu" size="14"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
@@ -59,11 +57,11 @@
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="facebookSignInButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CDl-Ak-8b5"/>
+                                                            <action selector="facebookSignInButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZJ1-Kg-FLR"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:zck-NX-E9u:image" translatesAutoresizingMaskIntoConstraints="NO" id="zck-NX-E9u">
-                                                        <rect key="frame" x="20" y="11.333333333333343" width="12" height="24"/>
+                                                        <rect key="frame" x="20" y="11.666666666666657" width="12" height="24"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -78,28 +76,33 @@
                                                 </constraints>
                                             </view>
                                             <view alpha="0.69999999999999996" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="wHL-EH-gI9">
-                                                <rect key="frame" x="8" y="115.33333333333333" width="390" height="46.333333333333329"/>
+                                                <rect key="frame" x="8" y="122" width="400" height="47"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-Th-PNd" customClass="GoogleSignInButton" customModule="meditation_appUI" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="46.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="400" height="47"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="tinted" cornerStyle="capsule" buttonSize="large" titleAlignment="center">
                                                             <attributedString key="attributedTitle">
-                                                                <fragment content="CONTINUE WITH FACEBOOK">
+                                                                <fragment content="CONTINUE WITH">
                                                                     <attributes>
                                                                         <font key="NSFont" size="14" name="Helvetica"/>
                                                                         <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                                <fragment content=" GOOGLE">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="14" name="Helvetica"/>
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
                                                             <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="googleSignInButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LOM-2w-jVz"/>
+                                                            <action selector="googleSignInButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rjs-Si-xiJ"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:rOR-ep-W5c:image" translatesAutoresizingMaskIntoConstraints="NO" id="rOR-ep-W5c">
-                                                        <rect key="frame" x="20" y="11.333333333333314" width="24" height="24"/>
+                                                        <rect key="frame" x="20" y="11.666666666666657" width="24" height="24"/>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -110,29 +113,29 @@
                                                     <constraint firstAttribute="bottom" secondItem="KLF-Th-PNd" secondAttribute="bottom" id="dpl-L0-HGx"/>
                                                     <constraint firstItem="KLF-Th-PNd" firstAttribute="top" secondItem="wHL-EH-gI9" secondAttribute="top" id="ghL-7m-9dQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="KLF-Th-PNd" secondAttribute="trailing" id="h3X-Be-XJe"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="uPw-0g-ZuI"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-94-rge">
-                                        <rect key="frame" x="12" y="177.66666666666663" width="406" height="315"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-94-rge">
+                                        <rect key="frame" x="12" y="236.33333333333331" width="416" height="305.99999999999994"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GSs-ff-bgA">
-                                                <rect key="frame" x="0.0" y="0.0" width="406" height="254"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="416" height="226"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR LOG IN WITH EMAIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S41-p4-s4q">
-                                                        <rect key="frame" x="8" y="8" width="390" height="52"/>
+                                                        <rect key="frame" x="8" y="8" width="400" height="45"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="52" id="FdJ-sy-Hae"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="7Ar-bi-0JY"/>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="FdJ-sy-Hae"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wue-xA-EaQ" customClass="ValidationTextField" customModule="meditation_appUI" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="70.000000000000028" width="390" height="52"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wue-xA-EaQ" customClass="ValidationTextField" customModule="meditation_appUI" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="63" width="400" height="45"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                                         <userDefinedRuntimeAttributes>
@@ -141,8 +144,8 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="geF-bJ-8fJ" customClass="ValidationTextField" customModule="meditation_appUI" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="132.00000000000003" width="390" height="52"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="geF-bJ-8fJ" customClass="ValidationTextField" customModule="meditation_appUI" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="118" width="400" height="45"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
@@ -151,10 +154,10 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfE-sr-IAC" customClass="UIFlatTextField" customModule="meditation_appUI" customModuleProvider="target">
-                                                        <rect key="frame" x="8" y="194.00000000000003" width="390" height="52"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfE-sr-IAC" customClass="UIFlatTextField" customModule="meditation_appUI" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="173" width="400" height="45"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numbersAndPunctuation" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isPasswordField" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
@@ -163,29 +166,26 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nNG-iI-hgN">
-                                                <rect key="frame" x="0.0" y="274" width="406" height="41"/>
+                                                <rect key="frame" x="0.0" y="246.00000000000006" width="416" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i have read the Privace Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlo-vT-4vY">
-                                                        <rect key="frame" x="8" y="10.333333333333313" width="221.33333333333334" height="20.333333333333329"/>
+                                                        <rect key="frame" x="8" y="19.666666666666629" width="350" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="rCR-WM-cnL">
-                                                        <rect key="frame" x="229.33333333333337" y="7.9999999999999432" width="168.66666666666663" height="25"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Kov-ht-Tnz">
-                                                                <rect key="frame" x="143.66666666666666" y="1.6666666666666643" width="25" height="22.000000000000004"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="25" id="fbD-XB-SsO"/>
-                                                                    <constraint firstAttribute="width" constant="25" id="uXu-ZE-6Fh"/>
-                                                                </constraints>
-                                                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
-                                                            </imageView>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9y-3F-rD0" customClass="CheckBoxView" customModule="meditation_appUI" customModuleProvider="target">
+                                                        <rect key="frame" x="358" y="8" width="50" height="44"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="ISE-Cp-gkL"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="h9y-3F-rD0" firstAttribute="top" secondItem="nNG-iI-hgN" secondAttribute="top" constant="4" id="8mT-Jh-6Xp"/>
+                                                    <constraint firstAttribute="bottom" secondItem="h9y-3F-rD0" secondAttribute="bottom" constant="4" id="ahv-pY-d07"/>
+                                                    <constraint firstAttribute="trailing" secondItem="h9y-3F-rD0" secondAttribute="trailing" id="d14-6B-xGP"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="vIx-Ls-c9A"/>
                                                 </constraints>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -193,22 +193,22 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vOA-dm-cYp">
-                                        <rect key="frame" x="190" y="500.66666666666657" width="50" height="222.33333333333331"/>
+                                        <rect key="frame" x="175.66666666666666" y="601.33333333333337" width="88.999999999999972" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="900" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34M-5e-dK5">
-                                        <rect key="frame" x="12" y="731" width="406" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="kDl-Mi-zjY"/>
-                                        </constraints>
+                                        <rect key="frame" x="12" y="710.66666666666663" width="416" height="50.333333333333371"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="GET STARTED" cornerStyle="capsule" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="SignUpButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zv1-KR-TZJ"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H2S-hS-4H8">
-                                        <rect key="frame" x="95" y="789" width="240" height="50"/>
+                                        <rect key="frame" x="100" y="820" width="240" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="qbC-z5-G16"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Wsw-N7-V0X"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -235,9 +235,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="CreateLabel" destination="mBq-AU-ma8" id="o8M-OC-xvw"/>
-                        <outlet property="checkBoxImageView" destination="Kov-ht-Tnz" id="0LA-d0-Sa6"/>
+                        <outlet property="SignUpButton" destination="34M-5e-dK5" id="wwO-XK-EUX"/>
+                        <outlet property="checkBoxView" destination="h9y-3F-rD0" id="mvD-kK-fIC"/>
                         <outlet property="emailTextField" destination="wue-xA-EaQ" id="5Gm-XA-Z1i"/>
+                        <outlet property="facebookSignInButton" destination="kpC-Yn-FSJ" id="nvC-Nf-0cs"/>
+                        <outlet property="googleSignInButton" destination="KLF-Th-PNd" id="10I-tJ-jTW"/>
+                        <outlet property="headerLabel" destination="mBq-AU-ma8" id="jY3-vT-5ve"/>
                         <outlet property="passWordTextField" destination="mfE-sr-IAC" id="1xI-ZV-9DD"/>
                         <outlet property="userNameTextField" destination="geF-bJ-8fJ" id="pZR-jw-BiP"/>
                     </connections>
@@ -1584,7 +1587,6 @@ etx64Xrpeux68Xr5AAAAAAAAAgEAAAAAAAAAaAAAAAAAAAAAAAAAAAAAevw
 </mutableData>
         </image>
         <image name="signUpBG" width="607" height="429"/>
-        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
