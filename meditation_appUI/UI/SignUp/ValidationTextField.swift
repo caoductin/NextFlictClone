@@ -8,11 +8,13 @@
 import UIKit
 
 class ValidationTextField: UITextField{
+    
     @IBInspectable var validationTypeIndex: Int = 0 {
         didSet {
             setup()
         }
     }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
@@ -27,12 +29,13 @@ class ValidationTextField: UITextField{
         case email = 0
         case userName = 1
     }
+    
     private var validationType: ValidationType {
-          return ValidationType(rawValue: validationTypeIndex) ?? .email
-      }
-  
+        return ValidationType(rawValue: validationTypeIndex) ?? .email
+    }
+    
     private func setup() {
-        layer.cornerRadius = 20
+        layer.cornerRadius = 12
         backgroundColor = .systemGray6
         translatesAutoresizingMaskIntoConstraints = false
         leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
@@ -57,17 +60,6 @@ class ValidationTextField: UITextField{
         rightViewMode = .always
     }
     
-    private func isValidEmail(_ email: String) -> Bool {
-        let emailRegex = "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}$"
-        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return emailPredicate.evaluate(with: email)
-    }
-    
-    private func isValidUsername(_ username: String) -> Bool {
-        let usernameRegex = "^[A-Za-z0-9_]{3,16}$"
-        let usernamePredicate = NSPredicate(format: "SELF MATCHES %@", usernameRegex)
-        return usernamePredicate.evaluate(with: username)
-    }
     func onTextChanged(){
         guard let text = text,!text.isEmpty else{
             updateRightView(isValid: false)
@@ -76,9 +68,9 @@ class ValidationTextField: UITextField{
         let isValid: Bool
         switch validationType{
         case .email :
-            isValid = isValidEmail(text)
+            isValid = ValidationManager().isValidEmail(text)
         case .userName :
-            isValid = isValidUsername(text)
+            isValid = ValidationManager().isValidUsername(text)
         }
         updateRightView(isValid: isValid)
     }
